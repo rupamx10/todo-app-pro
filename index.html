@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="An advanced To-Do List app with themes, search, categories, and local storage support.">
+  <meta name="keywords" content="To-Do List, Task Manager, Productivity, Todo App, Reminder">
+  <meta name="author" content="Rupam Mali">
+  <title>Advanced To-Do List</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>📝 My To-Do List</h1>
+      <div class="theme-selector">
+        <label for="themeSelector">Theme:</label>
+        <select id="themeSelector">
+          <option value="light">Light</option>
+          <option value="dark">Dark</option>
+          <option value="solarized">Solarized</option>
+          <option value="neon">Neon</option>
+        </select>
+      </div>
+    </header>
+
+    <section class="input-section">
+      <input type="text" id="taskInput" placeholder="Enter a new task...">
+      <input type="date" id="dueDateInput">
+      <select id="categoryInput">
+        <option value="Personal">Personal</option>
+        <option value="Work">Work</option>
+        <option value="Shopping">Shopping</option>
+      </select>
+      <select id="priorityInput">
+        <option value="Low">Low Priority</option>
+        <option value="Medium">Medium Priority</option>
+        <option value="High">High Priority</option>
+      </select>
+      <button id="addTaskButton">➕ Add</button>
+    </section>
+
+    <section class="filter-section">
+      <input type="text" id="searchInput" placeholder="🔎 Search tasks...">
+      <select id="filterCategory">
+        <option value="All">All Categories</option>
+        <option value="Personal">Personal</option>
+        <option value="Work">Work</option>
+        <option value="Shopping">Shopping</option>
+      </select>
+      <button id="toggleCompletedButton">Hide Completed</button>
+      <button id="sortTasksButton">Sort by Due Date</button>
+    </section>
+
+    <ul id="taskList" class="task-list"></ul>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
